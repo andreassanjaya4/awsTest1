@@ -78,13 +78,14 @@ public class PetsController {
         return newPet;
     }
 
-    @Autowired
-    UserRepository userRepository;
+    //@Autowired
+    //UserRepository userRepository;
 
     @RequestMapping(path = "/users", method = RequestMethod.GET)
     public Object getListUsers() {
         System.out.println("test ");
-        System.out.println("test u " + userRepository);
-        return userRepository.findAll();
+        //System.out.println("test u " + userRepository);
+        return "teset";
+        //return userRepository.findAll();
     }
 }
