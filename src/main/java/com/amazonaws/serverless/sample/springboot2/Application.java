@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.HandlerMapping;
@@ -21,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @SpringBootApplication
 @Import({ PetsController.class })
+@EnableJpaRepositories("com.amazonaws.serverless.sample.springboot2.dao")
 public class Application extends SpringBootServletInitializer {
 
     // silence console logging
