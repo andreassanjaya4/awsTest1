@@ -11,7 +11,10 @@ import com.amazonaws.serverless.sample.springboot2.config.SpringConfig;
 import com.amazonaws.serverless.sample.springboot2.filter.CognitoIdentityFilter;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
@@ -21,7 +24,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.EnumSet;
 
-
+@SpringBootApplication
+@EnableJpaRepositories("com.amazonaws.serverless.sample.springboot2")
 public class StreamLambdaHandler extends AbstractHandler<SpringConfig> implements RequestStreamHandler {
     private static SpringBootLambdaContainerHandler<AwsProxyRequest, AwsProxyResponse> handler;
     static {
