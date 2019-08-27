@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @SpringBootApplication
-@Import({ PetsController.class })
+//@Import({ PetsController.class })
 @EnableJpaRepositories("com.amazonaws.serverless.sample.springboot2.dao")
 public class Application extends SpringBootServletInitializer {
 

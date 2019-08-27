@@ -34,7 +34,7 @@ import java.util.UUID;
 
 @RestController
 @EnableWebMvc
-@Import(UserRepository.class)
+//@Import(UserRepository.class)
 public class PetsController {
     @RequestMapping(path = "/pets", method = RequestMethod.POST)
     public Pet createPet(@RequestBody Pet newPet) {
