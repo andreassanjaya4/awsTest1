@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by Phincon on 22/08/2019.
  */
+
 public interface UserRepository extends CrudRepository<User, String> {
 
 }
