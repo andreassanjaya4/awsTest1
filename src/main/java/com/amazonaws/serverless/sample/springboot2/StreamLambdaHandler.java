@@ -24,9 +24,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.EnumSet;
 
-@SpringBootApplication
-@EnableJpaRepositories("com.amazonaws.serverless.sample.springboot2")
-public class StreamLambdaHandler extends AbstractHandler<SpringConfig> implements RequestStreamHandler {
+//extends AbstractHandler<SpringConfig> 
+public class StreamLambdaHandler implements RequestStreamHandler {
     private static SpringBootLambdaContainerHandler<AwsProxyRequest, AwsProxyResponse> handler;
     static {
         try {
